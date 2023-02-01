@@ -56,10 +56,9 @@ def fine_tuning(tokenizer,arg, train_bool,img_path ):
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f'Currently using "{device.upper()}" device')
 
-    path = 'ImageSource/images'
-    data = np.zeros((10001, 2), dtype=np.object)
+    data = np.zeros((101, 2), dtype=np.object)
     i = 0
-    for line in open('ImageDiscription/test.txt', 'r', encoding='UTF8'):
+    for line in open(arg['path_description'], 'r', encoding='UTF8'):
         data[i, :] = line.replace('\n', "").split('|')
         i += 1
 
