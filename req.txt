@@ -1,0 +1,8 @@
+torch
+transformers
+torchvision
+opencv-python
+tqdm
+nltk
+editdistance
+torchsummary
