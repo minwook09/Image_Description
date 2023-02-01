@@ -482,8 +482,8 @@ def fine_tuning(tokenizer,arg, train_bool,img_path ):
                 torch.save(model.state_dict(), arg['PATH'])
                 break
 
-        else:
-            prediction(model,filepath=img_path)
+    else:
+        prediction(model,filepath=img_path)
 
     # path ='/workspace/IMAGE/images/images'
     # root = '/workspace/IMAGE/images/images'
