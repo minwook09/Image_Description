@@ -81,7 +81,7 @@ print(f'Currently using "{device.upper()}" device')
 path = sys.argv[1]  #여기서 이미지 파일 조정 가능 
 data = np.zeros((31, 2), dtype=np.object) #현재 158916개의 데이터셋
 i = 0
-for line in open('/workspace/IMAGE/imgDes.txt', 'r', encoding='utf8'):
+for line in open(sys.argv[2], 'r', encoding='utf8'):
     data[i, :] = line.replace('\n', "").split('|')
     i += 1
     
