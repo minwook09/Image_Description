@@ -45,8 +45,6 @@ seed = 42
 
 # In[49]:
 
-print(sys.argv[1])
-
 torch.random.manual_seed(seed)
 torch.cuda.manual_seed(seed)
 np.random.seed(seed)
@@ -125,7 +123,6 @@ invTrans = T.Compose([T.Normalize(mean = [ 0., 0., 0. ],
 
 
 # In[52]:
-
 
 root = sys.argv[1]
 class CapDataset(Dataset):
@@ -539,6 +536,4 @@ if sys.argv[9] == 'True':
 
 
 elif sys.argv[9] == 'False':
-    
-    print(sys.argv[10])
     pred = prediction(model,filepath=str(sys.argv[10]))
